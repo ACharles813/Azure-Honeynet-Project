@@ -32,9 +32,14 @@ For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL t
 
 ## Attack Maps Before Hardening / Security Controls
 
-![(before) NSG-Malicious-Allowed-In](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/3e8d93f6-ad91-4bb9-b255-7a67d2504025)<br>
+##### The attack map below is of Syslog authorization failures.
 ![(before) Syslog-SSH-Auth-Fail](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/df3976ec-370d-4fdf-bd47-0ed0af63b303)<br>
+
+##### The attack map below is of Windows Authentification failures via RDP (remote desktop protocol). 
 ![(before) Windows-RDP-Auth-Fail](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/920a78f7-695a-4399-ae17-18b826d05f2f)<br>
+
+##### The attack map below is of a Network Security Group that allowed all traffic inbound.
+![(before) NSG-Malicious-Allowed-In](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/3e8d93f6-ad91-4bb9-b255-7a67d2504025)<b>
 
 
 
@@ -69,6 +74,17 @@ Stop Time	2023-06-26 13:22
 | SecurityAlert            | 0
 | SecurityIncident         | 9
 | AzureNetworkAnalytics_CL | 0
+
+
+The following table shows the net change within the metrics mentioned in both tables above.
+| Metric                                        | Percent (%) Change
+| --------------------------------------------- | --------------------
+| Security Events (Windows VMs)                 | -86.21
+| Syslog    (Linux VMs)                         | -99.72
+| Security Alert (Microsoft Defender for Cloud) | -100.00
+| Security Incident   (Sentinel Incidents)      | -97.56
+| NSG Inbound Malicious Flows Allowed           | -100.00
+
 
 ## Conclusion
 
