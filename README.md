@@ -2,8 +2,7 @@
 ![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
 
 ## Introduction
-
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+The purpose of this project is to create a mini honeynet in Azure and measure the level of activity for 24 hours in an unsecure environinment, and then 24 hours after hardening the environment. To acheieve this, log sources from various resources are ingested into a Log Analytics workspace. The log sources are then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. The following metrics are then measured for 24 hours prior to applying a few security controls and 24 hours after:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -32,23 +31,26 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+
+![(before) NSG-Malicious-Allowed-In](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/3e8d93f6-ad91-4bb9-b255-7a67d2504025)<br>
+![(before) Syslog-SSH-Auth-Fail](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/df3976ec-370d-4fdf-bd47-0ed0af63b303)<br>
+![(before) Windows-RDP-Auth-Fail](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/920a78f7-695a-4399-ae17-18b826d05f2f)<br>
+
+
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+The following table shows the metrics we measured in our insecure environment for 24 hours:<br>
+Start Time 2023-06-23 06:36<br>
+Stop Time 2023-06-24 06:36
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 81812
+| Syslog                   | 9022
+| SecurityAlert            | 4
+| SecurityIncident         | 369
+| AzureNetworkAnalytics_CL | 2195
 
 ## Attack Maps Before Hardening / Security Controls
 
@@ -56,16 +58,16 @@ Stop Time 2023-03-16 17:04:29
 
 ## Metrics After Hardening / Security Controls
 
-The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:<br>
+Start Time 2023-06-25 13:22<br>
+Stop Time	2023-06-26 13:22
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
+| SecurityEvent            | 11281
 | Syslog                   | 25
 | SecurityAlert            | 0
-| SecurityIncident         | 0
+| SecurityIncident         | 9
 | AzureNetworkAnalytics_CL | 0
 
 ## Conclusion
