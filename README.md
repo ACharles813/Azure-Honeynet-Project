@@ -1,7 +1,7 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
 ![Cloud Honeynet + SOC](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/7df667fe-7eac-4d37-93d1-311dc73ccf70)
-)
-)
+
+
 
 ## Introduction
 The purpose of this project is to create a mini honeynet in Azure and measure the level of activity for 24 hours in an unsecure environinment, and then 24 hours after hardening the environment. To acheieve this, log sources from various resources are ingested into a Log Analytics workspace. The log sources are then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. The following metrics are then measured for 24 hours prior to applying a few security controls and 24 hours after:
