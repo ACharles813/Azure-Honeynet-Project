@@ -41,13 +41,13 @@ To harden the environment, the following measures were taken:
 
 ## Attack Maps Before Hardening / Security Controls
 
-##### The attack map below is of Syslog authorization failures.
+The attack map below is of Syslog authorization failures.
 ![(before) Syslog-SSH-Auth-Fail](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/df3976ec-370d-4fdf-bd47-0ed0af63b303)<br>
 
-##### The attack map below is of Windows Authentification failures via RDP (remote desktop protocol). 
+The attack map below is of Windows Authentification failures via RDP (remote desktop protocol). 
 ![(before) Windows-RDP-Auth-Fail](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/920a78f7-695a-4399-ae17-18b826d05f2f)<br>
 
-##### The attack map below is of a Network Security Group that allowed all traffic inbound.
+The attack map below is of a Network Security Group that allowed all traffic inbound.
 ![(before) NSG-Malicious-Allowed-In](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/3e8d93f6-ad91-4bb9-b255-7a67d2504025)<b>
 
 
