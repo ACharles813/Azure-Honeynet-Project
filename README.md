@@ -13,10 +13,13 @@ The purpose of this project is to create a mini honeynet in Azure and measure th
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+![Before Hardening Environment](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/ae6455ee-0ce4-43bd-89f1-cfbf535e5478)
+
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+![After Hardening Environment](https://github.com/ACharles813/Azure-Honeynet-Project/assets/138184708/a7a723fa-8825-4c31-84ad-fc56b679e98d)
+
+
 
 The architecture of the mini honeynet in Azure consists of the following components:
 
